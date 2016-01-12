@@ -52,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="6" data-basepath="../.." data-revision="Mon Jan 11 2016 07:39:09 GMT-0700 (MST)">
+    <div class="book" data-level="6" data-basepath="../.." data-revision="Mon Jan 11 2016 14:07:13 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -780,16 +780,31 @@
             
         </li>
     
-        <li class="chapter " data-level="6.3" data-path="language/layout/adjoin.html">
+        <li class="chapter " data-level="6.3" data-path="language/layout/flow.html">
             
                 
-                    <a href="../../language/layout/adjoin.html">
+                    <a href="../../language/layout/flow.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>6.3.</b>
                         
-                        adjoin
+                        flow
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="language/layout/join.html">
+            
+                
+                    <a href="../../language/layout/join.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        join
                     </a>
             
             
@@ -1236,10 +1251,12 @@
 <ul>
 <li><span class="doc-link layout"><a href="align.html" target="_doc"><code>align</code></a></span> aligns all children to the max side or min side of the first child along selected dimensions.</li>
 <li><span class="doc-link layout"><a href="center.html" target="_doc"><code>center</code></a></span> centers all children to the first child along selected dimensions.</li>
-<li><span class="doc-link layout"><a href="adjoin.html" target="_doc"><code>adjoin</code></a></span> puts each child right next to the previous child along selected dimensions.</li>
+<li><span class="doc-link layout"><a href="join.html" target="_doc"><code>join</code></a></span> joins all children into an array-like structure where each child is next
+to the previous child along one dimension, and centered along the other two dimensions.</li>
+<li><span class="doc-link layout"><a href="flow.html" target="_doc"><code>flow</code></a></span> arranges all children to flow along selected dimensions.</li>
 </ul>
 <p>In the examples below, we compare the effects of <span class="doc-link layout"><a href="align.html" target="_doc"><code>align</code></a></span>,
-<span class="doc-link layout"><a href="center.html" target="_doc"><code>center</code></a></span>, and <span class="doc-link layout"><a href="adjoin.html" target="_doc"><code>adjoin</code></a></span> as they are applied to a group of
+<span class="doc-link layout"><a href="center.html" target="_doc"><code>center</code></a></span>, <span class="doc-link layout"><a href="join.html" target="_doc"><code>join</code></a></span>, and <span class="doc-link layout"><a href="flow.html" target="_doc"><code>flow</code></a></span> as they are applied to a group of
 three differently sized cubes.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cg%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p><code>l=&quot;align y max&quot;</code> aligns the pink and red cubes to meet at the max side
@@ -1248,10 +1265,13 @@ of the yellow cube (first children) along the y axis.</p>
 <p><code>l=&quot;center y&quot;</code> centers the pink and red cubes to the center
 of the yellow cube (first children) along the y axis.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20y%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
-<p><code>l=&quot;adjoin y&quot;</code> moves the pink and red cubes along the y axis
-in such a way that the 2nd adjoins the 1st and the 3rd adjoins
-the 2nd, only along the y axis.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22adjoin%20y%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><code>l=&quot;join y&quot;</code> joins the three cubes into an array along the y axis. The
+first (yellow) cube is fixed, while the other two are centered with respect to
+the first&apos;s center.</p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22join%20y%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><code>l=&quot;flow y&quot;</code> flows the three cubes along the y axis. The positions in the
+other two dimensions are not changed.</p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22flow%20y%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Each layout command uses the first child as the reference, anchors it at
 the same position, and re-aranges the rest of the children with respect to this first child.
 This is why in all the examples above, the yellow cube always remains in the

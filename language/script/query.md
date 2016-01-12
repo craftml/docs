@@ -83,14 +83,13 @@ Perform the layout operations described in `expression`  on the matched elements
 <cube/>
 <sphere/>
 <script>
-  // make all cubes adjoining along the x axis
-  $('cube').l('adjoin x max')
+  // join all cubes along the x axis
+  $('cube').l('join x')
 
   // select the middle cube and the sphere
-  // place the sphere above the cube by
-  // 'adjoin' and 'center'
+  // place the sphere above the cube
   $('cube#middle').add('sphere')
-    .l('adjoin z max; center x')
+    .l('join x')
 </script>
 ```
 

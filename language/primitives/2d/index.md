@@ -27,7 +27,7 @@ for a number of purposes.
 
 One useful technique is to use a 2D shape as a reference maker to perform
 special layout that's hard to achieved using only the builtin layout operations,
-such as {{ 'align' | attr}}, {{ 'adjoin' | attr}}, and {{ 'center' | attr}}.
+such as {{ 'align' | attr}}, {{ 'flow' | attr}}, and {{ 'center' | attr}}.
 2D shapes do participate in layout operations , but they do not get exported for 3D printing.
 
 In the example below, we create a cylinder and place a couple circles to mark two distinct
@@ -56,12 +56,12 @@ align the sphere with the other circle whose id is `marker2`.
 <sphere t="scale 0.5" color="green"/>
 
 <script>
-  // align the cube with #marker1
+  // join the cube with #marker1
   $('circle#marker1').add('cube')
-    .l('adjoin y max; center xz')
+    .l('join y')
 
-  // align the sphere with #marker2  
+  // join the sphere with #marker2  
   $('circle#marker2').add('sphere')
-    .l('adjoin y max; center xz')    
+    .l('join y')    
 </script>
 {% endcraftml %}

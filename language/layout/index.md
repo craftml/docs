@@ -5,10 +5,12 @@ A layout command's purpose is to spatially arrange the children of an object.
 CraftML provides the following bulit-in layout commands:
 * {{ 'align' | l}} aligns all children to the max side or min side of the first child along selected dimensions.
 * {{ 'center' | l}} centers all children to the first child along selected dimensions.
-* {{ 'adjoin' | l}} puts each child right next to the previous child along selected dimensions.
+* {{ 'join' | l}} joins all children into an array-like structure where each child is next
+to the previous child along one dimension, and centered along the other two dimensions.
+* {{ 'flow' | l}} arranges all children to flow along selected dimensions.
 
 In the examples below, we compare the effects of {{ 'align' | l}},
-{{ 'center' | l}}, and {{ 'adjoin' | l}} as they are applied to a group of
+{{ 'center' | l}}, {{ 'join' | l}}, and {{'flow'| l }} as they are applied to a group of
 three differently sized cubes.
 
 {% craftml %}
@@ -41,12 +43,23 @@ of the yellow cube (first children) along the y axis.
 </g>
 {% endcraftml %}
 
-`l="adjoin y"` moves the pink and red cubes along the y axis
-in such a way that the 2nd adjoins the 1st and the 3rd adjoins
-the 2nd, only along the y axis.
+`l="join y"` joins the three cubes into an array along the y axis. The
+first (yellow) cube is fixed, while the other two are centered with respect to
+the first's center.
 
 {% craftml %}
-<g l="adjoin y">
+<g l="join y">
+  <cube t="size y 20; position x 0" color="yellow"/>
+  <cube t="size y 15; position x 20" color="pink"/>
+  <cube t="size y 10; position x 40" color="red"/>
+</g>
+{% endcraftml %}
+
+`l="flow y"` flows the three cubes along the y axis. The positions in the
+other two dimensions are not changed.
+
+{% craftml %}
+<g l="flow y">
   <cube t="size y 20; position x 0" color="yellow"/>
   <cube t="size y 15; position x 20" color="pink"/>
   <cube t="size y 10; position x 40" color="red"/>

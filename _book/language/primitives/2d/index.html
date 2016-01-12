@@ -52,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2" data-basepath="../../.." data-revision="Mon Jan 11 2016 07:39:09 GMT-0700 (MST)">
+    <div class="book" data-level="2.2" data-basepath="../../.." data-revision="Mon Jan 11 2016 14:07:13 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -780,16 +780,31 @@
             
         </li>
     
-        <li class="chapter " data-level="6.3" data-path="language/layout/adjoin.html">
+        <li class="chapter " data-level="6.3" data-path="language/layout/flow.html">
             
                 
-                    <a href="../../../language/layout/adjoin.html">
+                    <a href="../../../language/layout/flow.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>6.3.</b>
                         
-                        adjoin
+                        flow
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="language/layout/join.html">
+            
+                
+                    <a href="../../../language/layout/join.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        join
                     </a>
             
             
@@ -1251,7 +1266,7 @@ for a number of purposes.</p>
 <h3 id="spatial-markers">Spatial Markers</h3>
 <p>One useful technique is to use a 2D shape as a reference maker to perform
 special layout that&apos;s hard to achieved using only the builtin layout operations,
-such as <span class="doc-link attr"><a href="../../directive/align.html" target="_doc"><code>align</code></a></span>, <span class="doc-link attr"><a href="../../directive/adjoin.html" target="_doc"><code>adjoin</code></a></span>, and <span class="doc-link attr"><a href="../../directive/center.html" target="_doc"><code>center</code></a></span>.
+such as <span class="doc-link attr"><a href="../../directive/align.html" target="_doc"><code>align</code></a></span>, <span class="doc-link attr"><a href="../../directive/flow.html" target="_doc"><code>flow</code></a></span>, and <span class="doc-link attr"><a href="../../directive/center.html" target="_doc"><code>center</code></a></span>.
 2D shapes do participate in layout operations , but they do not get exported for 3D printing.</p>
 <p>In the example below, we create a cylinder and place a couple circles to mark two distinct
 areas on the front side of this cylinder. Next, we create a small blue cube and
@@ -1259,7 +1274,7 @@ a small green sphere. We use <code>$</code> in a script tag to select the circle
 is <code>marker1</code>, and then
 add the cube to the selection to align this cube to that circle. Similarly, we
 align the sphere with the other circle whose id is <code>marker2</code>.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%3E%0A%20%20%3Ccylinder%20height%3D%2220%22%0A%20%20%20%20style%3D%22opacity%3A0.9%3B%20color%3A%20yellow%22%2F%3E%0A%0A%20%20%3C!--%20define%20two%20circles%20as%20markers%20--%3E%0A%20%20%3Ccircle%20t%3D%22rotate%20x%2090%3B%20position%200%208%209%22%0A%20%20%20%20id%3D%22marker1%22%0A%20%20%20%20style%3D%22color%3A%20red%22%2F%3E%0A%20%20%3Ccircle%20t%3D%22rotate%20x%2090%3B%20position%200%208%202%22%0A%20%20%20%20id%3D%22marker2%22%0A%20%20%20%20style%3D%22color%3A%20red%22%2F%3E%20%20%20%20%0A%3C%2Fg%3E%0A%0A%3Ccube%20t%3D%22scale%200.5%22%20color%3D%22blue%22%2F%3E%0A%3Csphere%20t%3D%22scale%200.5%22%20color%3D%22green%22%2F%3E%0A%0A%3Cscript%3E%0A%20%20%2F%2F%20align%20the%20cube%20with%20%23marker1%0A%20%20%24(&apos;circle%23marker1&apos;).add(&apos;cube&apos;)%0A%20%20%20%20.l(&apos;adjoin%20y%20max%3B%20center%20xz&apos;)%0A%0A%20%20%2F%2F%20align%20the%20sphere%20with%20%23marker2%20%20%0A%20%20%24(&apos;circle%23marker2&apos;).add(&apos;sphere&apos;)%0A%20%20%20%20.l(&apos;adjoin%20y%20max%3B%20center%20xz&apos;)%20%20%20%20%0A%3C%2Fscript%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%3E%0A%20%20%3Ccylinder%20height%3D%2220%22%0A%20%20%20%20style%3D%22opacity%3A0.9%3B%20color%3A%20yellow%22%2F%3E%0A%0A%20%20%3C!--%20define%20two%20circles%20as%20markers%20--%3E%0A%20%20%3Ccircle%20t%3D%22rotate%20x%2090%3B%20position%200%208%209%22%0A%20%20%20%20id%3D%22marker1%22%0A%20%20%20%20style%3D%22color%3A%20red%22%2F%3E%0A%20%20%3Ccircle%20t%3D%22rotate%20x%2090%3B%20position%200%208%202%22%0A%20%20%20%20id%3D%22marker2%22%0A%20%20%20%20style%3D%22color%3A%20red%22%2F%3E%20%20%20%20%0A%3C%2Fg%3E%0A%0A%3Ccube%20t%3D%22scale%200.5%22%20color%3D%22blue%22%2F%3E%0A%3Csphere%20t%3D%22scale%200.5%22%20color%3D%22green%22%2F%3E%0A%0A%3Cscript%3E%0A%20%20%2F%2F%20join%20the%20cube%20with%20%23marker1%0A%20%20%24(&apos;circle%23marker1&apos;).add(&apos;cube&apos;)%0A%20%20%20%20.l(&apos;join%20y&apos;)%0A%0A%20%20%2F%2F%20join%20the%20sphere%20with%20%23marker2%20%20%0A%20%20%24(&apos;circle%23marker2&apos;).add(&apos;sphere&apos;)%0A%20%20%20%20.l(&apos;join%20y&apos;)%20%20%20%20%0A%3C%2Fscript%3E" width="740" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>

@@ -1,14 +1,15 @@
-# adjoin
+# flow
 
-{{ 'adjoin' | l}} puts each child right after the previous child along selected
-dimensions so that they are adjoining, while keeping the first child at its
+{{ 'flow' | l}} puts each child right after the previous child along selected
+dimensions so that they appear to _flow_ along these dimensions,
+while keeping the first child at its
 original position. A number can be optionally provided to indicate how much
 space to leave between every two objects.
 
 Let's consider a simple case involving two objects, a cube and a sphere. Initially,
 they are overlapping; we can only see a cube because of this. After
-adding `l="adjoin=x"` to `<g>`, the sphere is moved such that it now adjoins
-the cube, no longer overlapping with it.
+adding `l="flow=x"` to `<g>`, the sphere is moved such that it is next to the cube,
+no longer overlapping with it.
 
 {% craftml %}
 <!-- originally, they are all overlapping -->
@@ -17,14 +18,14 @@ the cube, no longer overlapping with it.
   <sphere/>
 </g>
 
-<!-- both are now adjoining -->
-<g l="adjoin x" t="position y 20">
+<!-- now they are adjacent -->
+<g l="flow x" t="position y 20">
   <cube/>
   <sphere/>
 </g>
 
 <!-- spacing = 2 -->
-<g l="adjoin x 2" t="position y 40">
+<g l="flow x 2" t="position y 40">
   <cube/>
   <sphere/>
 </g>
@@ -33,8 +34,8 @@ the cube, no longer overlapping with it.
 
 Let's look at an example with more objects involved. This time,
 we have a cube and three spheres forming a group.
-Initially, they are all overlapping. By adding `l="adjoin x"` to `<g>`,
-they are rearranged into a line along the _x_ axis where each child adjoins
+Initially, they are all overlapping. By adding `l="flow x"` to `<g>`,
+they are rearranged into a line along the _x_ axis where each child is next to
 the previous child.
 
 {% craftml %}
@@ -46,8 +47,8 @@ the previous child.
   <sphere/>
 </g>
 
-<!-- each child adjoins the previous child -->
-<g l="adjoin x" t="position y 20">
+<!-- flow in the x direction -->
+<g l="flow x" t="position y 20">
   <cube/>
   <sphere/>
   <sphere/>
@@ -55,9 +56,19 @@ the previous child.
 </g>
 
 <!-- a spacing of 5 is added -->
-<g l="adjoin x 5" t="position y 40">
+<g l="flow x 5" t="position y 40">
   <cube/>
   <sphere/>
+  <sphere/>
+  <sphere/>
+</g>
+{% endcraftml %}
+
+It is possible to flow in multiple directions simultaneously.
+{% craftml %}
+<g l="flow xy 2">
+  <cube/>
+  <sphere repeat="5"/>
   <sphere/>
   <sphere/>
 </g>
