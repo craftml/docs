@@ -52,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.5" data-basepath="../.." data-revision="Mon Jan 11 2016 14:07:13 GMT-0700 (MST)">
+    <div class="book" data-level="1.5" data-basepath="../.." data-revision="Tue Jan 12 2016 14:12:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -1261,18 +1261,18 @@ command <span class="doc-link transform"><a href="../../language/transform/rotat
 The letter <code>z</code> indicates that rotation is
 performed around the z-axis. The amount of rotation is 45 degrees and -45 degrees
 for the two cubes respectively.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Ideally, we want each tile to be shaped like a square with right-angle corners.
 But it is not the case right now. One easy way to force the tile to take on
 a square shape is to simply add another cube to say how this square should
 look like. We use <span class="doc-link transform"><a href="../../language/transform/center.html" target="_doc"><code>center</code></a></span> to align this square to the center of the cross.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%3E%0A%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22center%20xy%22%3E%0A%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>The transform command <span class="doc-link transform"><a href="../../language/transform/clip.html" target="_doc"><code>clip</code></a></span> is useful for clipping a solid to the spaces inside
 selected objects. Here, we wish to clip it to inside the first square cube.
 We assign an id to the square cube <code>id=&quot;square&quot;</code>.
 Then, we can write <code>clip #square</code> to select this square cube and remove
 everything except for the portions inside the square.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>We wrap the code above with a 
   <span class="doc-link tag"><a href="../../language/template/part.html" target="_doc"><code>&lt;part&gt;</code></a></span>
  tag and set its name to `tile`. This
@@ -1283,14 +1283,14 @@ Another benefit of using a
  tag is to improve readability. In the code
 below, it is not hard to understand the code is meant to create a row of
 five tiles.</tile></p>
-<p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Crow%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%3C%2Frow%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Crow%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%3C%2Frow%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Finally, we add <code>repeat=&quot;3&quot;</code> to <span class="doc-link transform"><a href="../../language/transform/rotate.html" target="_doc"><code>rotate</code></a></span> to repeat this row three times.
 See <span class="doc-link attr"><a href="../../language/directive/repeat.html" target="_doc"><code>repeat</code></a></span> for more details how it works.Finally, we
 wrap the repeated rows with a 
   <span class="doc-link tag"><a href="../../language/structure/col.html" target="_doc"><code>&lt;col&gt;</code></a></span>
  to arrange the resulting three rows in a
 column along the y-axis. We are done!</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Ccol%3E%0A%20%20%3Crow%20repeat%3D%223%22%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%20%20%20%20%0A%20%20%3C%2Frow%3E%0A%3C%2Fcol%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Ccol%3E%0A%20%20%3Crow%20repeat%3D%223%22%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%20%20%20%20%0A%20%20%3C%2Frow%3E%0A%3C%2Fcol%3E" width="740" height="315" frameborder="0"></iframe></p>
 <h2 id="exercises">Exercises</h2>
 <ol>
 <li><p>A lattice of 5 by 5 tiles</p>
@@ -1329,10 +1329,6 @@ column along the y-axis. We are done!</p>
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
-    
-
-    
-    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

@@ -52,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2" data-basepath="../../.." data-revision="Mon Jan 11 2016 14:07:13 GMT-0700 (MST)">
+    <div class="book" data-level="2.2" data-basepath="../../.." data-revision="Tue Jan 12 2016 14:12:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -1259,7 +1259,7 @@
 <li><p><span class="doc-link tag"><a href="path.html" target="_doc"><code>&lt;path&gt;</code></a></span></p>
 </li>
 </ul>
-<p><iframe src="http://localhost:5000/v?content=%3Crow%20spacing%3D%225%22%3E%0A%20%20%3Ccircle%2F%3E%0A%20%20%3Crectangle%2F%3E%0A%20%20%3Ctriangle%2F%3E%0A%20%20%3Cpolygon%20points%3D%220%2C0%2010%2C0%2010%2C10%205%2C15%200%2C10%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M10%2010%20h%2010%20v%2015%20z%22%2F%3E%0A%3C%2Frow%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Crow%20spacing%3D%225%22%3E%0A%20%20%3Ccircle%2F%3E%0A%20%20%3Crectangle%2F%3E%0A%20%20%3Ctriangle%2F%3E%0A%20%20%3Cpolygon%20points%3D%220%2C0%2010%2C0%2010%2C10%205%2C15%200%2C10%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M10%2010%20h%2010%20v%2015%20z%22%2F%3E%0A%3C%2Frow%3E" width="740" height="315" frameborder="0"></iframe></p>
 <h2 id="useful-techniques">Useful Techniques</h2>
 <p>Even though 2D primitives will not be exported for 3D printing, they are useful
 for a number of purposes.</p>
@@ -1274,7 +1274,7 @@ a small green sphere. We use <code>$</code> in a script tag to select the circle
 is <code>marker1</code>, and then
 add the cube to the selection to align this cube to that circle. Similarly, we
 align the sphere with the other circle whose id is <code>marker2</code>.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%3E%0A%20%20%3Ccylinder%20height%3D%2220%22%0A%20%20%20%20style%3D%22opacity%3A0.9%3B%20color%3A%20yellow%22%2F%3E%0A%0A%20%20%3C!--%20define%20two%20circles%20as%20markers%20--%3E%0A%20%20%3Ccircle%20t%3D%22rotate%20x%2090%3B%20position%200%208%209%22%0A%20%20%20%20id%3D%22marker1%22%0A%20%20%20%20style%3D%22color%3A%20red%22%2F%3E%0A%20%20%3Ccircle%20t%3D%22rotate%20x%2090%3B%20position%200%208%202%22%0A%20%20%20%20id%3D%22marker2%22%0A%20%20%20%20style%3D%22color%3A%20red%22%2F%3E%20%20%20%20%0A%3C%2Fg%3E%0A%0A%3Ccube%20t%3D%22scale%200.5%22%20color%3D%22blue%22%2F%3E%0A%3Csphere%20t%3D%22scale%200.5%22%20color%3D%22green%22%2F%3E%0A%0A%3Cscript%3E%0A%20%20%2F%2F%20join%20the%20cube%20with%20%23marker1%0A%20%20%24(&apos;circle%23marker1&apos;).add(&apos;cube&apos;)%0A%20%20%20%20.l(&apos;join%20y&apos;)%0A%0A%20%20%2F%2F%20join%20the%20sphere%20with%20%23marker2%20%20%0A%20%20%24(&apos;circle%23marker2&apos;).add(&apos;sphere&apos;)%0A%20%20%20%20.l(&apos;join%20y&apos;)%20%20%20%20%0A%3C%2Fscript%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%3E%0A%20%20%3Ccylinder%20height%3D%2220%22%0A%20%20%20%20style%3D%22opacity%3A0.9%3B%20color%3A%20yellow%22%2F%3E%0A%0A%20%20%3C!--%20define%20two%20circles%20as%20markers%20--%3E%0A%20%20%3Ccircle%20t%3D%22rotate%20x%2090%3B%20position%200%208%209%22%0A%20%20%20%20id%3D%22marker1%22%0A%20%20%20%20style%3D%22color%3A%20red%22%2F%3E%0A%20%20%3Ccircle%20t%3D%22rotate%20x%2090%3B%20position%200%208%202%22%0A%20%20%20%20id%3D%22marker2%22%0A%20%20%20%20style%3D%22color%3A%20red%22%2F%3E%20%20%20%20%0A%3C%2Fg%3E%0A%0A%3Ccube%20t%3D%22scale%200.5%22%20color%3D%22blue%22%2F%3E%0A%3Csphere%20t%3D%22scale%200.5%22%20color%3D%22green%22%2F%3E%0A%0A%3Cscript%3E%0A%20%20%2F%2F%20join%20the%20cube%20with%20%23marker1%0A%20%20%24(&apos;circle%23marker1&apos;).add(&apos;cube&apos;)%0A%20%20%20%20.l(&apos;join%20y&apos;)%0A%0A%20%20%2F%2F%20join%20the%20sphere%20with%20%23marker2%20%20%0A%20%20%24(&apos;circle%23marker2&apos;).add(&apos;sphere&apos;)%0A%20%20%20%20.l(&apos;join%20y&apos;)%20%20%20%20%0A%3C%2Fscript%3E" width="740" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1298,10 +1298,6 @@ align the sphere with the other circle whose id is <code>marker2</code>.</p>
 
     
     <script src="../../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
-    
-
-    
-    <script src="../../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

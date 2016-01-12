@@ -52,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.6" data-basepath="../.." data-revision="Mon Jan 11 2016 14:07:13 GMT-0700 (MST)">
+    <div class="book" data-level="1.6" data-basepath="../.." data-revision="Tue Jan 12 2016 14:12:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -1258,19 +1258,19 @@ can describe how the three parts should be stacked using a
  tag. Note
 that a negative spacing is used (i.e., <code>space=&quot;-4&quot;</code>) to allow the three parts to
 overlap (so that they can be printed in one piece later).</part></p>
-<p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22head%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22body%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22legs%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%0A%3Cstack%20spacing%3D%22-4%22%3E%0A%20%20%3Chead%2F%3E%0A%20%20%3Cbody%2F%3E%0A%20%20%3Clegs%2F%3E%0A%3C%2Fstack%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cpart%20name%3D%22head%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22body%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22legs%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%0A%3Cstack%20spacing%3D%22-4%22%3E%0A%20%20%3Chead%2F%3E%0A%20%20%3Cbody%2F%3E%0A%20%20%3Clegs%2F%3E%0A%3C%2Fstack%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>After we&apos;ve designed the snowman&apos;s overall structure, it&apos;s time to size the individual
 parts so that it looks like a snowman, who should have bigger lower parts and
 a relatively small head. To do this, we can utilize the transform command <span class="doc-link transform"><a href="../../language/transform/scale.html" target="_doc"><code>scale</code></a></span> .
 Here, we add <code>scale 1.5</code> to <code>&lt;body&gt;</code> to make the body 1.5 times large. We add
 <code>scale 2</code> to make the feet 2 times bigger. It does start to look more like a snowman.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22head%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22body%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22legs%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%0A%3Cstack%20spacing%3D%22-4%22%3E%0A%20%20%3Chead%2F%3E%0A%20%20%3Cbody%20t%3D%22scale%201.5%22%2F%3E%0A%20%20%3Clegs%20t%3D%22scale%202%22%2F%3E%0A%3C%2Fstack%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cpart%20name%3D%22head%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22body%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22legs%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%0A%3Cstack%20spacing%3D%22-4%22%3E%0A%20%20%3Chead%2F%3E%0A%20%20%3Cbody%20t%3D%22scale%201.5%22%2F%3E%0A%20%20%3Clegs%20t%3D%22scale%202%22%2F%3E%0A%3C%2Fstack%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Let&apos;s add some details. How about a pair of eyes? They should be added to
 the head part. We can simply modify the content inside the <code>&lt;part name=&quot;head&quot;&gt;</code>
 tag without touching the rest of the code. Here, we model the eyes using
 a row of cubes, and we use the <span class="doc-link transform"><a href="../../language/transform/position.html" target="_doc"><code>position</code></a></span>  command to put the eyes
 at the right place on the sphere.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22head%22%3E%0A%20%20%3Csphere%2F%3E%0A%20%20%3Crow%20spacing%3D%222%22%20t%3D%22position%202.5%208%205%22%3E%0A%20%20%20%20%3Ccube%20size%3D%222%202%202%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%222%202%202%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22body%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22legs%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%0A%3Cstack%20spacing%3D%22-4%22%3E%0A%20%20%3Chead%2F%3E%0A%20%20%3Cbody%20t%3D%22scale%201.5%22%2F%3E%0A%20%20%3Clegs%20t%3D%22scale%202%22%2F%3E%0A%3C%2Fstack%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cpart%20name%3D%22head%22%3E%0A%20%20%3Csphere%2F%3E%0A%20%20%3Crow%20spacing%3D%222%22%20t%3D%22position%202.5%208%205%22%3E%0A%20%20%20%20%3Ccube%20size%3D%222%202%202%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%222%202%202%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22body%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22legs%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%0A%3Cstack%20spacing%3D%22-4%22%3E%0A%20%20%3Chead%2F%3E%0A%20%20%3Cbody%20t%3D%22scale%201.5%22%2F%3E%0A%20%20%3Clegs%20t%3D%22scale%202%22%2F%3E%0A%3C%2Fstack%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Finally, let&apos;s add some colors to make the snowman look pretty! To do so,
 we can add a 
   <span class="doc-link tag"><a href="../../language/css/style.html" target="_doc"><code>&lt;style&gt;</code></a></span>
@@ -1279,7 +1279,7 @@ style your 3D object just like how one would style a web page. Here, we
 give each part a unique snow color. We color the eyes black. Note that
 a unique id (<code>id=&quot;eyes&quot;</code>) is added to the row representing the eyes so
 we can refer to the eyes in a styling rule by <code>#eyes</code>.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cstyle%3E%0A%20%20head%20%7B%20color%3A%20white%7D%0A%20%20body%20%7B%20color%3A%20silver%7D%0A%20%20legs%20%7Bcolor%3A%20grey%7D%0A%20%20%23eyes%20%7B%20color%3A%20black%7D%0A%3C%2Fstyle%3E%0A%0A%3Cpart%20name%3D%22head%22%3E%0A%20%20%3Csphere%2F%3E%0A%20%20%3Crow%20spacing%3D%222%22%20t%3D%22position%202.5%208%205%22%20id%3D%22eyes%22%3E%0A%20%20%20%20%3Ccube%20size%3D%222%202%202%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%222%202%202%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22body%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22legs%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%0A%3Cstack%20spacing%3D%22-4%22%3E%0A%20%20%3Chead%2F%3E%0A%20%20%3Cbody%20t%3D%22scale%201.5%22%2F%3E%0A%20%20%3Clegs%20t%3D%22scale%202%22%2F%3E%0A%3C%2Fstack%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cstyle%3E%0A%20%20head%20%7B%20color%3A%20white%7D%0A%20%20body%20%7B%20color%3A%20silver%7D%0A%20%20legs%20%7Bcolor%3A%20grey%7D%0A%20%20%23eyes%20%7B%20color%3A%20black%7D%0A%3C%2Fstyle%3E%0A%0A%3Cpart%20name%3D%22head%22%3E%0A%20%20%3Csphere%2F%3E%0A%20%20%3Crow%20spacing%3D%222%22%20t%3D%22position%202.5%208%205%22%20id%3D%22eyes%22%3E%0A%20%20%20%20%3Ccube%20size%3D%222%202%202%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%222%202%202%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22body%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22legs%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%0A%3Cstack%20spacing%3D%22-4%22%3E%0A%20%20%3Chead%2F%3E%0A%20%20%3Cbody%20t%3D%22scale%201.5%22%2F%3E%0A%20%20%3Clegs%20t%3D%22scale%202%22%2F%3E%0A%3C%2Fstack%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Done! We have a snowman!</p>
 
                     
@@ -1304,10 +1304,6 @@ we can refer to the eyes in a styling rule by <code>#eyes</code>.</p>
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
-    
-
-    
-    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

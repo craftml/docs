@@ -52,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.3" data-basepath="../.." data-revision="Mon Jan 11 2016 14:07:13 GMT-0700 (MST)">
+    <div class="book" data-level="1.3" data-basepath="../.." data-revision="Tue Jan 12 2016 14:12:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -1261,17 +1261,17 @@
 to <code>5 50 5</code>, which is <code>5</code> units
 along the x-axis, <code>50</code> units along the y-axis, and <code>5</code> units along the z-axis.
 By default, one unit is equal to one <em>mm</em>.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Ccube%20size%3D%225%2050%205%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Ccube%20size%3D%225%2050%205%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Add the 
   <span class="doc-link tag"><a href="../../language/template/repeat.html" target="_doc"><code>&lt;repeat&gt;</code></a></span>
  attribute to the cube tag and set its value to <code>10</code>, which will give
 us 10 copies of this vertical stick.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Ccube%20repeat%3D%2210%22%20size%3D%225%2050%205%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Ccube%20repeat%3D%2210%22%20size%3D%225%2050%205%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>However, all these 20 sticks are overlapping. To put them in a row with even
 spacing, we can wrap them inside a<br>  <span class="doc-link tag"><a href="../../language/structure/row.html" target="_doc"><code>&lt;row&gt;</code></a></span>
  tag and set the <code>spacing</code> attribute
 to <code>5</code> to add a spacing of 5 units between every two sticks.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Crow%20spacing%3D%225%22%3E%0A%20%20%3Ccube%20repeat%3D%2210%22%20size%3D%225%2050%205%22%2F%3E%0A%3C%2Frow%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Crow%20spacing%3D%225%22%3E%0A%20%20%3Ccube%20repeat%3D%2210%22%20size%3D%225%2050%205%22%2F%3E%0A%3C%2Frow%3E" width="740" height="315" frameborder="0"></iframe></p>
 <h2 id="step-2">Step 2</h2>
 <p>The next step is to build two long sticks. Similarly, we can create a 
   <span class="doc-link tag"><a href="../../language/primitives/3d/cube.html" target="_doc"><code>&lt;cube&gt;</code></a></span>
@@ -1283,14 +1283,14 @@ the two sticks, we can use a
   <span class="doc-link tag"><a href="../../language/structure/row.html" target="_doc"><code>&lt;row&gt;</code></a></span>
  except
 items are lined up along the y-axis.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Ccol%20spacing%3D%2230%22%3E%0A%20%20%3Ccube%20repeat%3D%222%22%20size%3D%2290%205%205%22%2F%3E%0A%3C%2Fcol%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Ccol%20spacing%3D%2230%22%3E%0A%20%20%3Ccube%20repeat%3D%222%22%20size%3D%2290%205%205%22%2F%3E%0A%3C%2Fcol%3E" width="740" height="315" frameborder="0"></iframe></p>
 <h2 id="step-3">Step 3</h2>
 <p>Finally, we can bring the two parts together. We also want to align the
 two parts correctly. To do so, we group them using 
   <span class="doc-link tag"><a href="../../language/structure/g.html" target="_doc"><code>&lt;g&gt;</code></a></span>
  and use the
 layout command <span class="doc-link layout"><a href="../../language/layout/center.html" target="_doc"><code>center</code></a></span>.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20y%22%3E%0A%0A%20%20%3C!--%20a%20row%20of%2010%20sticks%20--%3E%0A%20%20%3Crow%20spacing%3D%225%22%3E%0A%20%20%20%20%3Ccube%20repeat%3D%2210%22%20size%3D%225%2050%205%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%0A%20%20%3C!--%20a%20column%20of%202%20sticks%20--%3E%0A%20%20%3Ccol%20spacing%3D%2230%22%3E%0A%20%20%20%20%3Ccube%20repeat%3D%222%22%20size%3D%2295%205%205%22%2F%3E%0A%20%20%3C%2Fcol%3E%0A%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22center%20y%22%3E%0A%0A%20%20%3C!--%20a%20row%20of%2010%20sticks%20--%3E%0A%20%20%3Crow%20spacing%3D%225%22%3E%0A%20%20%20%20%3Ccube%20repeat%3D%2210%22%20size%3D%225%2050%205%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%0A%20%20%3C!--%20a%20column%20of%202%20sticks%20--%3E%0A%20%20%3Ccol%20spacing%3D%2230%22%3E%0A%20%20%20%20%3Ccube%20repeat%3D%222%22%20size%3D%2295%205%205%22%2F%3E%0A%20%20%3C%2Fcol%3E%0A%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <h2 id="exercises">Exercises</h2>
 <p>Can you build these other kinds of fences?</p>
 <ol>
@@ -1327,10 +1327,6 @@ layout command <span class="doc-link layout"><a href="../../language/layout/cent
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
-    
-
-    
-    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

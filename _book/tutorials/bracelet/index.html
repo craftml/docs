@@ -52,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.8" data-basepath="../.." data-revision="Mon Jan 11 2016 14:07:13 GMT-0700 (MST)">
+    <div class="book" data-level="1.8" data-basepath="../.." data-revision="Tue Jan 12 2016 14:12:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -1266,7 +1266,7 @@ Every 3D model on [craftml.io] has a unique module id. This heart model&apos;s i
 we want to import <code>4yS59</code> and call it <code>foo</code>. We write <code>&lt;foo module=&quot;4yS59&quot;&gt;</code>.
 <code>foo</code> can be any name we want. But it is usually a good idea to choose a
 meaningful and descriptive name, such as <code>heart</code>.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <h3 id="step-2-ring">Step 2: Ring</h3>
 <p>If you&apos;ve gone through the other tutorials, by now you should probably be
 able to craft your own ring. But let&apos;s just find one we can import to save time.
@@ -1276,7 +1276,7 @@ One good option is the <strong>donut</strong> module at <a href="https://craftml
 be more appropriate in our case. Notice that there are two parameters we can
 set to customize this ring (or donut): <code>diameter</code> and <code>resolution</code>. We
 set the <code>diameter</code> to 80.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <h3 id="step-3-layout">Step 3: Layout</h3>
 <p>The last step is to arrange the 12 hearts around
 the ring. Let&apos;s see if there&apos;s an existing layout module that will do this
@@ -1286,12 +1286,12 @@ looks like the one we need. Its
 module ID is <code>uHUIw</code>. It has a <code>radius</code> parameter. It takes all the elements
 inside the tag and arranges them around a circle of that radius. We set
 the <code>radius</code> to 40 in order to match the ring&apos;s diameter, which is 80.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E%0A%3C%2Fsun-layout%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E%0A%3C%2Fsun-layout%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Still not quite right because the hearts are lying down on the ground plane.
 We need to rotate them to the right orientation (<span class="doc-link transform"><a href="../../language/transform/rotate.html" target="_doc"><code>rotate</code></a></span> ).</p>
-<p><iframe src="http://localhost:5000/v?content=%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%0A%20%20%20%20t%3D%22rotate%20x%2090%3B%20rotate%20z%2090%22%2F%3E%0A%3C%2Fsun-layout%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%0A%20%20%20%20t%3D%22rotate%20x%2090%3B%20rotate%20z%2090%22%2F%3E%0A%3C%2Fsun-layout%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Finally, let&apos;s do some centering and styling. Here&apos;s our bracelet!
-<iframe src="http://localhost:5000/v?content=%3Cstyle%3E%0Aheart%20%7B%0A%20%20color%3A%20crimson%3B%0A%7D%0Aring%20%7B%0A%20%20color%3A%20pink%3B%0A%7D%0A%3C%2Fstyle%3E%0A%0A%3Cg%20l%3D%22centerZ()%22%3E%0A%20%20%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%0A%20%20%20%20%20%20t%3D%22rotate%20x%2090%3B%20rotate%20z%2090%22%2F%3E%0A%20%20%3C%2Fsun-layout%3E%0A%20%20%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
+<iframe src="https://craftml.io/v?content=%3Cstyle%3E%0Aheart%20%7B%0A%20%20color%3A%20crimson%3B%0A%7D%0Aring%20%7B%0A%20%20color%3A%20pink%3B%0A%7D%0A%3C%2Fstyle%3E%0A%0A%3Cg%20l%3D%22centerZ()%22%3E%0A%20%20%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%0A%20%20%20%20%20%20t%3D%22rotate%20x%2090%3B%20rotate%20z%2090%22%2F%3E%0A%20%20%3C%2Fsun-layout%3E%0A%20%20%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1315,10 +1315,6 @@ We need to rotate them to the right orientation (<span class="doc-link transform
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
-    
-
-    
-    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

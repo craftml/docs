@@ -52,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.4" data-basepath="../.." data-revision="Mon Jan 11 2016 14:07:13 GMT-0700 (MST)">
+    <div class="book" data-level="1.4" data-basepath="../.." data-revision="Tue Jan 12 2016 14:12:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -1257,7 +1257,7 @@ approach is to reduce the size of this sphere along the z-axis. To do so, we
 use the transform command <span class="doc-link transform"><a href="../../language/transform/size.html" target="_doc"><code>size</code></a></span>, which transforms its size so that the
 z dimension has the size of 2, while scaling the other two dimensions
 proportionally to keep its aspect ratio.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Csphere%20t%3D%22size%20z%202%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Csphere%20t%3D%22size%20z%202%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Next we need to do is to drill holes. To achieve this, we create four cylinders
 (
   <span class="doc-link tag"><a href="../../language/primitives/3d/cylinder.html" target="_doc"><code>&lt;cylinder&gt;</code></a></span>
@@ -1266,16 +1266,16 @@ need to be positioned at the four corners of the squares. To do so, we use
 the transform command <span class="doc-link transform"><a href="../../language/transform/position.html" target="_doc"><code>position</code></a></span> to change to position of the cylinder to
 the desired locations. Because later we will want to move these cylinders as a group,
 we use a <span class="doc-link transform"><a href="../../language/transform/g.html" target="_doc"><code>g</code></a></span> tag to group them.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>We bring all the parts together, but they are not aligned correctly.
-<iframe src="http://localhost:5000/v?content=%3Csphere%20t%3D%22size%20z%202%22%2F%3E%0A%3Cg%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
+<iframe src="https://craftml.io/v?content=%3Csphere%20t%3D%22size%20z%202%22%2F%3E%0A%3Cg%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>What we want is to center the cylinders with respect to the center of the button.
 To do so, we use the layout command <span class="doc-link layout"><a href="../../language/layout/center.html" target="_doc"><code>center</code></a></span>.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%3E%0A%20%20%3Csphere%20t%3D%22size%20z%202%22%2F%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22center%20xy%22%3E%0A%20%20%3Csphere%20t%3D%22size%20z%202%22%2F%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Now that we are satisfied with where the cylinders are, we cut them. We use
 the transform command <span class="doc-link transform"><a href="../../language/transform/cut.html" target="_doc"><code>cut</code></a></span> and use the tag name
 directly as the argument (i.e., <code>cut cylinder</code>).</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%3B%20cut%20cylinder%22%3E%0A%20%20%3Csphere%20t%3D%22size%20z%202%22%2F%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22center%20xy%3B%20cut%20cylinder%22%3E%0A%20%20%3Csphere%20t%3D%22size%20z%202%22%2F%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Congraulations! You&apos;ve crafted a button.</p>
 <h2 id="exercises">Exercises</h2>
 <ol>
@@ -1315,10 +1315,6 @@ directly as the argument (i.e., <code>cut cylinder</code>).</p>
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
-    
-
-    
-    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
