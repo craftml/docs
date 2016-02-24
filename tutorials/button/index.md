@@ -64,7 +64,7 @@ the transform command {{ 'cut' | t }} and use the tag name
 directly as the argument (i.e., `cut cylinder`).
 
 {% craftml %}
-<g l="center xy; cut cylinder">
+<g l="center xy" t="cut cylinder">
   <sphere t="size z 2"/>
   <g>
     <cylinder radius="1" t="position 0 0 0"/>
@@ -75,7 +75,7 @@ directly as the argument (i.e., `cut cylinder`).
 </g>
 {% endcraftml %}
 
-Congraulations! You've crafted a button.
+Congratulations! You've crafted a button.
 
 ## Exercises
 
